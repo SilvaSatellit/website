@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SilvaSatellit</title>
+    <link rel="stylesheet" href="style.css"> 
+    <script src="teamInformation.js" defer></script>
+    <script src="language.js" defer></script>
+    <script type="importmap">
+			{
+				"imports": {
+					"three": "./three.module.js",
+					"three/addons/": "./jsm/"
+				}
+			}
+		</script>
+    <script type="module" src="3d_model.js" defer></script>
+    <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  </head>
+  <body>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#mission">Mission</a>
+      <a href="#vorstellung">Vorstellung</a>
+      <a href="#cansat">CanSat</a>
+      <img src="images/logos/sprache/deutsch01.svg" alt="German" id="language-switch-german" onclick="german()">
+      <img src="images/logos/sprache/englisch01.svg" alt="English" id="language-switch-english" onclick="english()">
+    </nav>
+    <header>
+      <img src="images/BackgroundStars.png" id="header-background">
+      <img src="images/logo.jpeg" alt="Logo" id="header-logo">
+    </header>
+    <main>
+      <section id="logos">
+        <a href="https://github.com/SilvaSatellit" target="_blank" rel="noopener noreferrer">
+          <img src="images/logos/github-logo.svg" alt="GitHub Logo" loading="lazy">
+        </a>
+        <a href="https://www.youtube.com/@silva_satellit" style="filter: invert(1);" target="_blank" rel="noopener noreferrer">
+          <img src="images/logos/youtube-logo.png" alt="YouTube Logo" loading="lazy">
+        </a>
+        <a href="https://www.instagram.com/silva_satellit/" target="_blank" rel="noopener noreferrer">
+          <img src="images/logos/Instagram-logo.svg" alt="Instagram Logo" loading="lazy">
+        </a>
+      </section>
+      <section id="mission">
+        <h2></h2>
+        <p></p>
+      </section>
+      <section id="vorstellung">
+        <h2></h2>
+        <h3></h3>
+        <div class="splitInfo">
+          <p>
+         </p>
+          <a href="https://www.cansat.de" target="_blank" rel="noopener noreferrer">
+            <img src="images/CanSatLogo.png" alt="CanSat Logo" id="CanSatLogo">
+          </a>
+        </div>
+        <h3></h3>
+        <div class="splitInfo">
+          <p>
+          </p>
+          <a href="https://www.life-science-lab.org/cms/" target="_blank" rel="noopener noreferrer">
+            <img src="images/labLogo.png" alt="Life-Science Lab Logo" id="labLogo">
+          </a>
+        </div>
+        <h3></h3>
+        <div style="position: relative; width: 100%; display: grid; place-items: center;">
+          <svg style="aspect-ratio: 1.4224358974;width:70vw;">
+            <image xlink:href="images/Gruppenfoto.png" width="100%" height="100%"/>
+            <g onmouseover="handleInformation(1, 'show')" onmouseout="handleInformation(1, 'disappear')" opacity="0">
+              <rect x="0" y="0" width="17%" height="100%"></rect>
+            </g>
+            <g onmouseover="handleInformation(2, 'show')" onmouseout="handleInformation(2, 'disappear')" opacity="0">
+              <rect x="17%" y="0" width="17%" height="100%"></rect>
+            </g>
+            <g onmouseover="handleInformation(3, 'show')" onmouseout="handleInformation(3, 'disappear')" opacity="0">
+              <rect x="34%" y="0" width="17%" height="100%"></rect>
+            </g>
+            <g onmouseover="handleInformation(4, 'show')" onmouseout="handleInformation(4, 'disappear')" opacity="0">
+              <rect x="51%" y="0" width="17%" height="100%"></rect>
+            </g>
+            <g onmouseover="handleInformation(5, 'show')" onmouseout="handleInformation(5, 'disappear')" opacity="0">
+              <rect x="68%" y="0" width="17%" height="100%"></rect>
+            </g>
+            <g onmouseover="handleInformation(6, 'show')" onmouseout="handleInformation(6, 'disappear')" opacity="0">
+              <rect x="85%" y="0" width="17%" height="100%"></rect>
+            </g>
+          </svg>
+          <div class="personInfo">
+            Johanna
+          </div>
+          <div class="personInfo">
+            Aurelie
+          </div>
+          <div class="personInfo">
+            Lasse
+          </div>
+          <div class="personInfo">
+            Janis
+          </div>
+          <div class="personInfo">
+            Jonathan
+          </div>
+          <div class="personInfo">
+            Yanchen
+          </div>
+        </div>
+      </section>
+      <section id="cansat">
+        <div id="three-js-model">
+          <h2 id="three-js-model-text"></h2>
+          </div>
+      </section>
+    </main>
+    <footer>
+      <h2>Impressum</h2>
+      <p><a href="mailto://team@silva-satellit.de">team@silva-satellit.de</a></p>
+      <img src="images/logo.jpeg" alt="Logo">
+    </footer>
+  </body>
+</html>

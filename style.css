@@ -1,0 +1,268 @@
+@font-face {
+  font-family: SmoochSans;
+  src: url(/fonts/SmoochSans.ttf);
+}  
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 4rem;
+  overflow-x: hidden;
+}
+
+header, html {
+  position: relative;
+}
+
+h2 {
+  font-size: 40px;
+  text-align: center;
+  letter-spacing: 3px;
+  font-family: SmoochSans;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 30px;
+  text-align: center;
+  letter-spacing: 2px;
+  font-family: SmoochSans;
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+p {
+  margin-inline: 3rem;
+}
+
+footer {
+  width: 100vw;
+  background-color: #ccc;
+  padding-bottom: 2rem;
+  position: relative;
+  border-top: 1px solid #eee;
+}
+
+footer img {
+  aspect-ratio: 1;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+#header-background {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+
+#header-logo {
+  position: absolute;
+  border-radius: 20%;
+  top: 50%;
+  left: 50%;
+  height: min(50vh, 400px);
+  aspect-ratio: 1;
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 0px 10px #FFFFFF;
+}
+
+nav {
+  width: 100vw;
+  height: 5vh;
+  background-color: rgba(11, 11, 11, 0.5);
+  position: fixed;
+  z-index: 314;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding-top: .3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 2.5rem;
+  font-weight: lighter;
+  transition: text-shadow .1s ease-in;
+  letter-spacing: 3px;
+  font-family: SmoochSans;
+  font-weight: 500;
+  margin-right: 10vw;
+}
+
+nav a:hover {
+  text-shadow: 0px 0px 8px #FFFFFF;
+}
+
+
+nav *:not(a) {
+  position: absolute;
+  right: 1vw;
+  top: .8vh;
+  width: 4vw;
+  height: 4vh;
+  filter: invert(1);
+}
+
+#logos {
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-block: 2rem;
+}
+
+#logos img {
+  height: 70px;
+  transition: scale .2s ease-in;
+}
+
+#logos img:hover {
+  scale: 1.05;
+}
+
+#ueberUns {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.personenInfo {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30%;
+  opacity: 0;
+  transition: opacity .1s ease-in;
+  background-color: white;
+}
+
+.personenInfo p {
+  margin-left: 1rem;
+}
+
+.splitInfo {
+  display: grid;
+  grid-template-columns: 70% 30%;
+  gap: 1rem;
+  padding: 2rem;
+  line-height: 1.5;
+  letter-spacing: 1px;
+}
+
+#CanSatLogo {
+  height: 200px;
+  right: 10%;
+  transform: translateY(-20%);
+  position: absolute;
+}
+
+#labLogo {
+  height: 120px;
+  right: 10%;
+  transform: translateY(-15%);
+  position: absolute;
+}
+
+#mission {
+  margin-inline: 2rem;
+  line-height: 1.5;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 450px) or (-webkit-max-device-width: 450px) {
+  .splitInfo {
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto;
+    padding-inline: 0;
+  }
+
+  #CanSatLogo {
+    position: relative;
+    transform: translateX(-50%);
+    left: 50%;
+  }
+  
+  #labLogo {
+    position: relative;
+    transform: translateX(-50%);
+    left: 50%;
+  }
+
+  #mission {
+    margin-inline: 0; 
+  }
+
+  #logos {
+    gap: 1rem;
+    flex-direction: column;
+  }
+  
+  #gruppenfoto {
+    width: 100vw;
+    height: auto;
+  }
+
+  footer img {
+    aspect-ratio: 1;
+    height: auto;
+    width: 150px;
+    position: relative;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 2rem;
+    border-radius: 1rem;
+  }
+
+  #header-logo {
+    width: 80%;
+    height: auto;
+  }
+
+  nav {
+    display: none;
+  }
+}
+
+.personInfo {
+  position: absolute;
+  width: 150px;
+  height: 100px;
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 0px 0px 10px grey;
+  padding: .5rem;
+  bottom: 2rem;
+  display: none;
+}
+
+#three-js-model {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  width: 80vw;
+  height: 100vh;
+  position: relative; /* Fügen Sie position: relative; hinzu, um die absolute Positionierung des Textes innerhalb zu ermöglichen */
+}
+
+#three-js-model-text {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center; /* Zentriert den Text innerhalb des Containers */
+}
