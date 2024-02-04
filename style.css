@@ -256,7 +256,7 @@ nav *:not(a) {
   margin-top: 50px;
   width: 80vw;
   height: 100vh;
-  position: relative; /* Fügen Sie position: relative; hinzu, um die absolute Positionierung des Textes innerhalb zu ermöglichen */
+  position: relative;
 }
 
 #three-js-model-text {
@@ -264,5 +264,20 @@ nav *:not(a) {
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  text-align: center; /* Zentriert den Text innerhalb des Containers */
+  text-align: center;
+}
+
+#anzeige-interaktiv {
+  display: block;
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
 }
