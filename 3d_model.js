@@ -3,7 +3,7 @@ import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 
 const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+const camera = new THREE.PerspectiveCamera(75, (window.innerWidth * (8/10)) / window.innerHeight, 0.1, 1000);
 const loader = new GLTFLoader();
 
 const renderer = new THREE.WebGLRenderer();
@@ -18,7 +18,7 @@ loader.load("cansat.glb", function (gltf) {
 });
 
 const controls = new OrbitControls(camera, renderer.domElement);
-camera.position.set(0, 20, 100);
+camera.position.set(100, 30, 5);
 controls.update();
 
 scene.background = new THREE.Color(0xffffff);
