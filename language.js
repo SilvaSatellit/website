@@ -8,6 +8,8 @@ var mission = document.getElementById("mission");
 var vorstellung = document.getElementById("vorstellung");
 var model = document.getElementById("three-js-model-text");
 
+var sponsor = document.getElementById("sponsoren");
+
 
 
 function german(){
@@ -29,6 +31,9 @@ vorstellung.querySelector('h3:nth-of-type(3)').textContent = "Unser Kernteam";
 
 // Texte interaktives Modell Deutsch
 model.textContent = "Unser CanSat";
+
+//Text Sponsoren Deutsch
+sponsor.querySelector('h2').textContent = "Ganz herzlich möchten wir uns bei unseren Sponsoren bedanken."
 
 }
 
@@ -53,6 +58,10 @@ vorstellung.querySelector('h3:nth-of-type(3)').textContent = "Our Core Team";
 
 // Texte interaktives Modell Englisch
 model.textContent = "Our CanSat";
+
+//Text Sponsoren English
+sponsor.querySelector('h2').textContent = "We would like to extend our heartfelt thanks to our sponsors."
+
 }
 
 
